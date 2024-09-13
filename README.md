@@ -1,8 +1,8 @@
-#DEmo project 1
+#Demo project 1
 
 #Author
 
-Artyom KUshnir st135665@student.spbu.ru
+Artyom Kushnir st135665@student.spbu.ru
 
 #Build
 
