@@ -1,14 +1,15 @@
 /* Artyom Kushnir st135665@student.spbu.ru
 */
+using namespace std;
 #include <iostream>
-int main(int argc, char *argv[])
+int main()
 {
-    std::cout<<"Hello, world"<<std::endl;
-    std::string str1 = "";
-    while(true)
+    cout<<"Hello, world"<<::endl;
+    string str1;
+    for (int i = 0; i < 52; i++);
     {
-        std::cin>> str1;
-        std::cout<< "Hello,";
+        cin>>str1;
+        cout<<"Hello, "<<str1<<::endl;
     }
 
 }
