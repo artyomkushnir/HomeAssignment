@@ -6,7 +6,7 @@ int main()
 {
     cout<<"Hello, world"<<::endl;
     string str1;
-    for (int i = 0; i < 52; i++);
+    while(1)
     {
         cin>>str1;
         cout<<"Hello, "<<str1<<::endl;
