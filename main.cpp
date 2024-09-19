@@ -1,23 +1,16 @@
 /* Artyom Kushnir st135665@student.spbu.ru
 */
+using namespace std;
 #include <iostream>
-#include "greet.h"
+#include "hello.h"
 
-int main(int argc, char *argv[]) {
-    std::string str1;
-    
-    greet(""); // Выводит "Hello, world!"
-    
-    while (true) {
-        std::cout << "Введите имя (или 'exit' для выхода): ";
-        std::cin >> str1;
-
-        if (str1 == "exit") {
-            break;
+int main(int argc, char *argv[]) 
+    {
+        string str1;
+        hello("");
+        while(1) 
+        {
+            cin>>str1;
+            hello(str1);
         }
-
-        greet(str1); // Выводит "Hello, <строка>!"
     }
-
-    return 0;
-}

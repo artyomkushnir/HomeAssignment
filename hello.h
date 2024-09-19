@@ -2,8 +2,7 @@
 */
 #ifndef HELLO_h
 #define HELLO_h
-namespace prj2
-{
-    void hello();
-}
-#endif
+using namespace std;
+
+void hello(string str1);
+#endif // HELLO_h

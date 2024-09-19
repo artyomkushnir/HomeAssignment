@@ -1,9 +1,9 @@
 /* Artyom Kushnir st135665@student.spbu.ru
 */
 using namespace std;
-#include <iostream>
 #include <hello.h>
-void hello(string& str1)
+#include <iostream>
+void hello(string str1)
 {
     if (str1.empty()) 
     {
