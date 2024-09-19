@@ -4,6 +4,6 @@
 #define HELLO_h
 namespace prj2
 {
-    void SayHello();
+    void hello();
 }
 #endif

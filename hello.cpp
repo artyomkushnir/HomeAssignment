@@ -2,14 +2,16 @@
 */
 using namespace std;
 #include <iostream>
-int main()
+#include <hello.h>
+void hello(string& str1)
 {
-    cout<<"Hello, world"<<::endl;
-    string str1;
-    while(1)
+    if (str1.empty()) 
     {
-        cin>>str1;
-        cout<<"Hello, "<<str1<<::endl;
+        cout<<"Hello, world!"<<std::endl;
+    } 
+    else 
+    {
+        std::cout <<"Hello, "<<str1<<"!"<<std::endl;
     }
 
 }
