@@ -1,11 +1,10 @@
-#Demo project 1
+Задача №1
 
-#Author
+Кушнир Артем, 24.Б81 
 
-Artyom Kushnir st135665@student.spbu.ru
+st135665@student.spbu.ru
 
 #Build
 
 #Run
 
-TBO
