@@ -2,6 +2,7 @@
 */
 #ifndef HELLO_h
 #define HELLO_h
+#include <string>
 using namespace std;
 
 void hello(string str1);

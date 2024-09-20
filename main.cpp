@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     {
         string str1;
         hello("");
-        while(1) 
+        while(1)
         {
             cin>>str1;
             hello(str1);

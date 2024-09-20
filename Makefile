@@ -1,21 +1,13 @@
-PROJECT=hello
-IDIR=.
-CXX=g++
-CXXFLAGS=-I$(IDIR)
-ODIR=obj
-LDIR =../lib
-LIBS=-lm
-DEPS = hello.h
-OBJ = main.o hello.o
-.PHONY: default
-default: all;
-%.o: %.cpp $(DEPS)
-$(CXX) -c -o $@ $< $(CXXFLAGS)
-$(PROJECT): $(OBJ)
-$(CXX) -o $@ $^ $(CXXFLAGS) $(LIBS)
-all: $(PROJECT)
-.PHONY: clean
+all: hello
+
+hello: main.o hello.o
+	g++ main.o hello.o -o hello
+
+main.o: main.cpp
+	g++ -c main.cpp
+
+hello.o: hello.cpp
+	g++ -c hello.cpp
+
 clean:
-rm -f *.o *~ core $(INCDIR)/*~
-cleanall: clean
-rm -f $(PROJECT)
+	rm -rf *.o hello

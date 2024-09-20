@@ -6,5 +6,9 @@ st135665@student.spbu.ru
 
 #Build
 
-#Run
+make
+
+#Run 
+
+./hello
 
