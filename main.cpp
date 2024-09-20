@@ -7,7 +7,7 @@ using namespace std;
 int main(int argc, char *argv[]) 
     {
         string str1;
-        hello("");
+        hello("World");
         while(1)
         {
             cin>>str1;
