@@ -3,7 +3,6 @@
 #ifndef HELLO_h
 #define HELLO_h
 #include <string>
-using namespace std;
 
-void hello(string str1);
+void hello(const std::string &str1);
 #endif // HELLO_h
