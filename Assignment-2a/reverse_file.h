@@ -4,5 +4,5 @@
 #define REVERSE_FILE_h
 #include <string>
 
-void reverse_file(const std:: &str1);
-#endif // HELLO_h
+void reverse_file(std::ifstream* infile, std::ofstream* outfile);
+#endif // REVERSE_FILE_h
