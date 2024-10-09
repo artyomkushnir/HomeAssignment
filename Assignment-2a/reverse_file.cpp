@@ -2,8 +2,10 @@
 */
 #include <iostream>
 #include <cstdio>
+#include "reverse_file.h"
+#include <fstream>
 
-void reverse_file(std::ifstream* infile, std::ofstream* outfile);
+void reverse_file(std::ifstream* infile, std::ofstream outfile);
 {
 	file_size = std::filesystem::file_size(infile);
 	char buffer[file_size];

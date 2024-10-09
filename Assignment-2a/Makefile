@@ -6,7 +6,7 @@ file: main.o reverse_file.o
 main.o: main.cpp
 	g++ -c main.cpp
 
-.o: reverse_file.cpp
+reverse_file.o: reverse_file.cpp
 	g++ -c reverse_file.cpp
 
 clean:

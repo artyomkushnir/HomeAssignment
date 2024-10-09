@@ -2,15 +2,17 @@
 */
 #include <iostream>
 #include <cstdio>
+#include "reverse_file.h"
+#include <fstream>
 
 int main()
 {
 	std::ifstream infile;
-	std::infile.open("source.pdf",std::ios::binary|std::ios::in);
+	infile.open("source.pdf",std::ios::binary|std::ios::in);
 	std::ofstream outfile;
-	std::outfile.open("temppdf.pdf",std::ios::binary|std::ios::out);
+	outfile.open("temppdf.pdf",std::ios::binary|std::ios::out);
 
-	reversed_file(&infile, outfile)
+	reverse_file(&infile, outfile);
 
 	infile.close();
 	outfile.close();
