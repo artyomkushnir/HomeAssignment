@@ -10,4 +10,4 @@ main.o: main.cpp
 	g++ -c reverse_file.cpp
 
 clean:
-	rm -rf *.o hello
+	rm -rf *.o file
