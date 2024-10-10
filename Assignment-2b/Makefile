@@ -9,9 +9,6 @@ main.o: main.cpp
 calculateRPN.o: calculateRPN.cpp
 		g++ -c calculateRPN.cpp
 
-calculateRPN.o: calculateRPN.cpp
-		g++ -c calculateRPN.cpp
-
 toStack.o: toStack.cpp
 		g++ -c toStack.cpp
 

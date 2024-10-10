@@ -8,12 +8,11 @@
 
 double calculateRPN(const char* expression)
 {
-    const int MAX_SIZE = 1024; 
-    double* stack = new double[MAX_SIZE]; 
+    double* stack = new double[1024]; 
     int top = -1; //указатель на вершину стека
     const char* token = strtok(const_cast<char*>(expression), " ");
 
-    while (token) 
+    while (token != nullptr)
     {
         if (isdigit(token[0]) || (token[0] == '-' && isdigit(token[1]))) 
         {
