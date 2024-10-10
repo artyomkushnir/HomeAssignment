@@ -1,23 +1,29 @@
 /* Artyom Kushnir st135665@student.spbu.ru
 */
 #include <iostream>
-#include <cstdio>
+#include <filesystem>
 #include "reverse_file.h"
 #include <fstream>
 
-void reverse_file(std::ifstream* infile, std::ofstream outfile);
+void reverse_file(const std::string &inputFilePath, const std::string &outputFilePath)
 {
-	file_size = std::filesystem::file_size(infile);
-	char buffer[file_size];
-	std::infile.read((char *)&buffer,sizeof(buffer));
+	std::streamsize fileSize = std::filesystem::file_size(inputFilePath);
+	char *buffer = new char[fileSize];
 
-	std::outfile.write((char *)&buffer,sizeof(buffer));
+	std::ifstream infile(inputFilePath, std::ios::binary|std::ios::in);
+	infile.read(buffer, fileSize);
+	infile.close();
 
-	for (std::size_t i = file_size; i > 0; --i) //
+	for(std::streamsize i=0; i<fileSize/2; i++) 
 	{
-        outfile.put(buffer[i - 1]);
-    }
+ 		int t = buffer[i];
+  		buffer[i] = buffer[fileSize-i-1];
+  		buffer[fileSize-i-1] = t;
+	}
 
+	std::ofstream outfile(outputFilePath, std::ios::binary|std::ios::out);
+	outfile.write(buffer, fileSize);
+	outfile.close();
     delete[] buffer;
 
 }

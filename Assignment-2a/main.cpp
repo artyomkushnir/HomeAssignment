@@ -7,13 +7,10 @@
 
 int main()
 {
-	std::ifstream infile;
-	infile.open("source.pdf",std::ios::binary|std::ios::in);
-	std::ofstream outfile;
-	outfile.open("temppdf.pdf",std::ios::binary|std::ios::out);
+	std::string inputFilePath = "source.pdf";
+	std::string outputFilePath = "temppdf.pdf";
+	
+	reverse_file(inputFilePath, outputFilePath);
 
-	reverse_file(&infile, outfile);
-
-	infile.close();
-	outfile.close();
+	return 0;
 }

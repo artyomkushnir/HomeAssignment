@@ -2,7 +2,7 @@
 */
 #ifndef REVERSE_FILE_h
 #define REVERSE_FILE_h
-#include <string>
+#include <fstream>
 
-void reverse_file(std::ifstream* infile, std::ofstream outfile);
+void reverse_file(const std::string &inputFilePath, const std::string &outputFilePath);
 #endif // REVERSE_FILE_h
