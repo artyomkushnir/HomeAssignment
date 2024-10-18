@@ -1,6 +1,5 @@
 /* Artyom Kushnir st135665@student.spbu.ru
 */
-#include <iostream>
 #include "RPN.h"
 
 int main()

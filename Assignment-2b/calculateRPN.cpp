@@ -1,15 +1,13 @@
 /* Artyom Kushnir st135665@student.spbu.ru
 */
-#include <iostream>
 #include <cstring>
 #include <cctype>
 #include "RPN.h"
-#include <cstdlib>
 
 double calculateRPN(const char* expression)
 {
     double* stack = new double[1024]; 
-    int top = -1; //указатель на вершину стека
+    int top = -1; //pointer to the top of stack
     const char* token = strtok(const_cast<char*>(expression), " ");
 
     while (token != nullptr)

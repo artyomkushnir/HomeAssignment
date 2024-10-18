@@ -1,5 +1,6 @@
 /* Artyom Kushnir st135665@student.spbu.ru
 */
+
 #include <cstdlib>
 #include <iostream>
 
