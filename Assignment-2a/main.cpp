@@ -3,7 +3,6 @@
 #include <iostream>
 #include <cstdio>
 #include "reverse_file.h"
-#include <fstream>
 
 int main()
 {

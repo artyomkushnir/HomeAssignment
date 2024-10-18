@@ -3,7 +3,6 @@
 #include <iostream>
 #include <filesystem>
 #include "reverse_file.h"
-#include <fstream>
 
 void reverse_file(const std::string &inputFilePath, const std::string &outputFilePath)
 {
