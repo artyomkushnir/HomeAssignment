@@ -8,6 +8,7 @@ main.o: main.cpp
 
 hello.o: hello.cpp
 	g++ -c hello.cpp
+	
 
 clean:
 	rm -rf *.o hello
