@@ -1,7 +1,16 @@
 #include "Autobot.h"
 
-Autobot::Autobot() : Transformer(10, 100, 50, 100, 30) {}
+Autobot::Autobot(std::string name, int powerLevel, std::string faction, std::string vehicleType)
+    : Transformer(name, powerLevel, faction), vehicleType(vehicleType) {}
 
-bool Autobot::lead() { return true; }
-uint Autobot::getStrength() const { return _strength; }
-void Autobot::setStrength(uint strength) { _strength = strength; }
+std::string Autobot::getVehicleType() const {
+    return vehicleType;
+}
+
+void Autobot::setVehicleType(const std::string &vehicleType) {
+    this->vehicleType = vehicleType;
+}
+
+void Autobot::transform() {
+    setIsTransformed(true);
+}

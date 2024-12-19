@@ -4,11 +4,16 @@
 #include "Transformer.h"
 
 class Decepticon : public Transformer {
+private:
+    std::string weaponType; //association
+
 public:
-    Decepticon();
-    bool villain();
-    uint getAmmo() const;
-    void setAmmo(uint ammo);
+    Decepticon(std::string name, int powerLevel, std::string faction, std::string weaponType);
+    
+    std::string getWeaponType() const;
+    void setWeaponType(const std::string &weaponType);
+
+    void transform() override; // 
 };
 
 #endif // DECEPTICON_H

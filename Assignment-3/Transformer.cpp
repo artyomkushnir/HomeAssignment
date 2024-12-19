@@ -1,17 +1,38 @@
 #include "Transformer.h"
 
-Transformer::Transformer(uint level, uint strength, uint range, uint fuel, uint ammo)
-    : _level(level), _strength(strength), _range(range), _fuel(fuel), _ammo(ammo),
-      _engine(100), _weapon("Laser") {}
+Transformer::Transformer(std::string name, int powerLevel, std::string faction)
+    : name(name), powerLevel(powerLevel), faction(faction), isTransformed(false) {}
 
 Transformer::~Transformer() {}
 
-bool Transformer::move() { return true; }
-bool Transformer::turn(Direction dir) { return true; }
-bool Transformer::jump() { return true; }
-bool Transformer::fire() { return true; }
-bool Transformer::ultimate() { return true; }
-bool Transformer::transform() { return true; }
+std::string Transformer::getName() const {
+    return name;
+}
 
-uint Transformer::getLevel() const { return _level; }
-void Transformer::setLevel(uint level) { _level = level; }
+void Transformer::setName(const std::string &name) {
+    this->name = name;
+}
+
+int Transformer::getPowerLevel() const {
+    return powerLevel;
+}
+
+void Transformer::setPowerLevel(int powerLevel) {
+    this->powerLevel = powerLevel;
+}
+
+std::string Transformer::getFaction() const {
+    return faction;
+}
+
+void Transformer::setFaction(const std::string &faction) {
+    this->faction = faction;
+}
+
+bool Transformer::getIsTransformed() const {
+    return isTransformed;
+}
+
+void Transformer::setIsTransformed(bool isTransformed) {
+    this->isTransformed = isTransformed;
+}

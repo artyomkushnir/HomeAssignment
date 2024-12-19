@@ -4,11 +4,16 @@
 #include "Transformer.h"
 
 class Autobot : public Transformer {
+private:
+    std::string vehicleType; // Композиция
+
 public:
-    Autobot();
-    bool lead();
-    uint getStrength() const;
-    void setStrength(uint strength);
+    Autobot(std::string name, int powerLevel, std::string faction, std::string vehicleType);
+    
+    std::string getVehicleType() const;
+    void setVehicleType(const std::string &vehicleType);
+
+    void transform() override; // реализация метода
 };
 
 #endif // AUTOBOT_H

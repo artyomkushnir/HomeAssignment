@@ -1,7 +1,16 @@
 #include "Decepticon.h"
 
-Decepticon::Decepticon() : Transformer(8, 90, 40, 70, 50) {}
+Decepticon::Decepticon(std::string name, int powerLevel, std::string faction, std::string weaponType)
+    : Transformer(name, powerLevel, faction), weaponType(weaponType) {}
 
-bool Decepticon::villain() { return true; }
-uint Decepticon::getAmmo() const { return _ammo; }
-void Decepticon::setAmmo(uint ammo) { _ammo = ammo; }
+std::string Decepticon::getWeaponType() const {
+    return weaponType;
+}
+
+void Decepticon::setWeaponType(const std::string &weaponType) {
+    this->weaponType = weaponType;
+}
+
+void Decepticon::transform() {
+    setIsTransformed(true);
+}
