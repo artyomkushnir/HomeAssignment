@@ -5,7 +5,7 @@
 
 class Decepticon : public Transformer {
 private:
-    std::string weaponType; //association
+    std::string weaponType; 
 
 public:
     Decepticon(std::string name, int powerLevel, std::string faction, std::string weaponType);
@@ -13,7 +13,7 @@ public:
     std::string getWeaponType() const;
     void setWeaponType(const std::string &weaponType);
 
-    void transform() override; // 
+    void transform() override; 
 };
 
 #endif // DECEPTICON_H

@@ -5,7 +5,7 @@
 
 class Autobot : public Transformer {
 private:
-    std::string vehicleType; // Композиция
+    std::string vehicleType; 
 
 public:
     Autobot(std::string name, int powerLevel, std::string faction, std::string vehicleType);
@@ -13,7 +13,7 @@ public:
     std::string getVehicleType() const;
     void setVehicleType(const std::string &vehicleType);
 
-    void transform() override; // реализация метода
+    void transform() override; 
 };
 
 #endif // AUTOBOT_H

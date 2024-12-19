@@ -8,6 +8,8 @@ public:
     Gun(std::string type, int damage);
     std::string getType() const;
     int getDamage() const;
+    void increaseDamage(int amount);
+    void decreaseDamage(int amount);
 
 private:
     std::string type;

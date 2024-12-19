@@ -26,6 +26,9 @@ public:
     bool getIsTransformed() const;
     void setIsTransformed(bool isTransformed);
 
+    void increasePowerLevel(int amount);
+    void decreasePowerLevel(int amount);
+
     virtual void transform() = 0; 
 };
 

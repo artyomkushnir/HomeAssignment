@@ -36,3 +36,15 @@ bool Transformer::getIsTransformed() const {
 void Transformer::setIsTransformed(bool isTransformed) {
     this->isTransformed = isTransformed;
 }
+//2 new methods
+void Transformer::increasePowerLevel(int amount) {
+    powerLevel += amount;
+}
+
+void Transformer::decreasePowerLevel(int amount) {
+    if (powerLevel - amount >= 0) {
+        powerLevel -= amount;
+    } else {
+        powerLevel = 0;
+    }
+}

@@ -9,3 +9,15 @@ std::string Gun::getType() const {
 int Gun::getDamage() const {
     return damage;
 }
+//2 new methods
+void Gun::increaseDamage(int amount) {
+    damage += amount;
+}
+
+void Gun::decreaseDamage(int amount) {
+    if (damage - amount >= 0) {
+        damage -= amount;
+    } else {
+        damage = 0;
+    }
+}
