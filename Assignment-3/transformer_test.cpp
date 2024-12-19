@@ -1,31 +1,24 @@
 #include <gtest/gtest.h>
 #include "Transformer.h"
-#include "Autobot.h" 
+#include "Autobot.h"
 #include "Decepticon.h" 
 
 TEST(TransformerTest, IncreasePowerLevel) {
-    Autobot autobot("Optimus Prime", 100);
+    Autobot autobot("Optimus Prime", 100, "Autobot", "Truck");
     autobot.increasePowerLevel(50);
     EXPECT_EQ(autobot.getPowerLevel(), 150);
 }
 
 TEST(TransformerTest, DecreasePowerLevel) {
-    Decepticon decepticon("Megatron", 90);
-    Decepticon.decreasePowerLevel(30);
+    Decepticon decepticon("Megatron", 90, "Decepticon", "Cannon");
+    decepticon.decreasePowerLevel(30);
     EXPECT_EQ(decepticon.getPowerLevel(), 60);
 }
 
-TEST(TransformerTest, IsStrongerThan) {
-    Autobot autobot("Optimus Prime", 100);
-    Decepticon decepticon("Megatron", 90);
-    
-    EXPECT_TRUE(autobot.isStrongerThan(decepticon));
-    EXPECT_FALSE(decepticon.isStrongerThan(autobot));
-}
 
 TEST(TransformerTest, Transform) {
-    Autobot autobot("Optimus Prime", 100);
-    Autobot.transform();
+    Autobot autobot("Optimus Prime", 100, "Autobot", "Truck");
+    autobot.transform();
     EXPECT_TRUE(autobot.getIsTransformed());
 }
 

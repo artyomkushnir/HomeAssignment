@@ -1,16 +1,16 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -g -Wall
-TARGET = transformers
-SOURCES = main.cpp Transformer.cpp Autobot.cpp Decepticon.cpp Gun.cpp
+CXXFLAGS = -std=c++14 -g -Wall -I/usr/include/gtest/include
+SOURCES = Transformer.cpp Autobot.cpp Decepticon.cpp Gun.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
 
-all: $(TARGET)
+main: main.o $(OBJECTS)
+	$(CXX) -o main main.o $(OBJECTS)
 
-$(TARGET): $(OBJECTS)
-	$(CXX) $(CXXFLAGS) -o $@ $^
+transformer_test: transformer_test.o $(OBJECTS)
+	$(CXX) -o transformer_test transformer_test.o $(OBJECTS) -L/usr/include/gtest/lib -lgtest -lpthread
 
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $<
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJECTS) $(TARGET)
+	rm -f *.o main transformer_test
