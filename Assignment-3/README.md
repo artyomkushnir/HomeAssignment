@@ -6,11 +6,13 @@
 
 st135665@student.spbu.ru
 
-**Build**
+**Build and Run main code**
 ```
 make
+./main
 ```
-**Run**
+**Build and Run google tests**
 ```
-./transformers
+make transformer_test
+./transformer_test
 ```
