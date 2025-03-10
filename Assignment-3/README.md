@@ -6,13 +6,28 @@
 
 st135665@student.spbu.ru
 
-**Build and Run main code**
-```
-make
-./main
-```
-**Build and Run google tests**
-```
-make transformer_test
-./transformer_test
-```
+## Prerequisites
+
+<par>sudo apt install build-essential</par>
+
+<par>sudo apt install libgtest-dev</par>
+
+## Build
+
+### Main code
+
+<par> make </par>
+
+### Google-tests
+
+<par> make transformer_test </par>
+
+## Run
+
+### Main code
+
+<par> ./main </par>
+
+### google-test
+
+<par> ./transformer_test
