@@ -1,16 +1,55 @@
+PROJECT = main
+
+LIBPROJECT = $(PROJECT).a
+
+TESTPROJECT = transformer_test
+
 CXX = g++
-CXXFLAGS = -std=c++14 -g -Wall -I/usr/include/gtest/include
+
+A = ar
+
+AFLAGS = rsv
+
+CXXFLAGS = -I. -std=c++14 -Wall -g -fPIC -I/usr/include/gtest/include
+
+LDXXFLAGS = $(CXXFLAGS) -L. -l:$(LIBPROJECT)
+
+LDGTESTFLAGS = $(LDXXFLAGS) -L/usr/include/gtest/lib -lgtest -lpthread
+
+DEPS = $(wildcard *.h)
+
 SOURCES = Transformer.cpp Autobot.cpp Decepticon.cpp Gun.cpp
-OBJECTS = $(SOURCES:.cpp=.o)
 
-main: main.o $(OBJECTS)
-	$(CXX) -o main main.o $(OBJECTS)
+OBJ = $(SOURCES:.cpp=.o)
 
-transformer_test: transformer_test.o $(OBJECTS)
-	$(CXX) -o transformer_test transformer_test.o $(OBJECTS) -L/usr/include/gtest/lib -lgtest -lpthread
+TEST-OBJ = transformer_test.o
 
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+.PHONY: default
+
+default: all;
+
+%.o: %.cpp $(DEPS)
+	$(CXX) -c -o $@ $< $(CXXFLAGS)
+
+$(LIBPROJECT): $(OBJ)
+	$(A) $(AFLAGS) $@ $^
+
+$(PROJECT): main.o $(LIBPROJECT)
+	$(CXX) -o $@ main.o $(LDXXFLAGS)
+
+$(TESTPROJECT): $(LIBPROJECT) $(TEST-OBJ)
+	$(CXX) -o $@ $(TEST-OBJ) $(LDGTESTFLAGS)
+
+test: $(TESTPROJECT)
+
+all: $(PROJECT)
+
+.PHONY: clean
 
 clean:
-	rm -f *.o main transformer_test
+	rm -f *.o
+
+cleanall: clean
+	rm -f $(PROJECT)
+	rm -f $(LIBPROJECT)
+	rm -f $(TESTPROJECT)
