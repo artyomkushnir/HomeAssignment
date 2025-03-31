@@ -3,7 +3,8 @@
 
 #include <string>
 
-class Transformer {
+class Transformer
+{
 private:
     std::string name;
     int powerLevel;
@@ -29,7 +30,7 @@ public:
     void increasePowerLevel(int amount);
     void decreasePowerLevel(int amount);
 
-    virtual void transform() = 0; 
+    virtual void transform() = 0;
 };
 
 #endif // TRANSFORMER_H

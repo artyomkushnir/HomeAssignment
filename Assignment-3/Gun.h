@@ -3,7 +3,8 @@
 
 #include <string>
 
-class Gun {
+class Gun
+{
 public:
     Gun(std::string type, int damage);
     std::string getType() const;
