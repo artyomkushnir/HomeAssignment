@@ -1,3 +1,5 @@
+/* Artyom Kushnir st135665@student.spbu.ru
+*/
 #ifndef TRANSFORMER_H
 #define TRANSFORMER_H
 

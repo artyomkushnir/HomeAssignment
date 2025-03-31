@@ -1,3 +1,5 @@
+/* Artyom Kushnir st135665@student.spbu.ru
+*/
 #ifndef AUTOBOT_H
 #define AUTOBOT_H
 
