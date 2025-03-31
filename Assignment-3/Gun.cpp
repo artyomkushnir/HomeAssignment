@@ -1,3 +1,5 @@
+/* Artyom Kushnir st135665@student.spbu.ru
+*/
 #include "Gun.h"
 
 Gun::Gun(std::string type, int damage) : type(type), damage(damage) {}

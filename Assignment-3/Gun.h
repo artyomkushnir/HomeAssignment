@@ -1,3 +1,5 @@
+/* Artyom Kushnir st135665@student.spbu.ru
+*/
 #ifndef GUN_H
 #define GUN_H
 

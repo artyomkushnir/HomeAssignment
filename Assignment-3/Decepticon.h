@@ -1,3 +1,5 @@
+/* Artyom Kushnir st135665@student.spbu.ru
+*/
 #ifndef DECEPTICON_H
 #define DECEPTICON_H
 

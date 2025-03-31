@@ -1,3 +1,5 @@
+/* Artyom Kushnir st135665@student.spbu.ru
+*/
 #include "Transformer.h"
 
 Transformer::Transformer(std::string name, int powerLevel, std::string faction)

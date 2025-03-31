@@ -1,3 +1,5 @@
+/* Artyom Kushnir st135665@student.spbu.ru
+*/
 #include <gtest/gtest.h>
 #include "Transformer.h"
 #include "Autobot.h"

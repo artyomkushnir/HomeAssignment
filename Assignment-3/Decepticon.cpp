@@ -1,3 +1,5 @@
+/* Artyom Kushnir st135665@student.spbu.ru
+*/
 #include "Decepticon.h"
 
 Decepticon::Decepticon(std::string name, int powerLevel, std::string faction, std::string weaponType)
