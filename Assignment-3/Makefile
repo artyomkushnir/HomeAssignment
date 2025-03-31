@@ -1,5 +1,3 @@
-/* Artyom Kushnir st135665@student.spbu.ru
-*/
 PROJECT = main
 
 LIBPROJECT = $(PROJECT).a
