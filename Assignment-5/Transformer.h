@@ -3,7 +3,8 @@
 
 #include <string>
 
-class Transformer {
+class Transformer
+{
 private:
     std::string name;
     int powerLevel;

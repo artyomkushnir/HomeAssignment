@@ -6,76 +6,85 @@
 #include "Decepticon.h"
 #include "Gun.h"
 
-TEST(TransformerTest, IncreasePowerLevel) {
+TEST(TransformerTest, IncreasePowerLevel)
+{
     Autobot autobot("Optimus Prime", 100, "Autobot", "Truck");
     autobot.increasePowerLevel(50);
     EXPECT_EQ(autobot.getPowerLevel(), 150);
 }
 
-TEST(TransformerTest, DecreasePowerLevel) {
+TEST(TransformerTest, DecreasePowerLevel)
+{
     Decepticon decepticon("Megatron", 90, "Decepticon", "Cannon");
     decepticon.decreasePowerLevel(30);
     EXPECT_EQ(decepticon.getPowerLevel(), 60);
 }
 
 
-TEST(TransformerTest, OutputOperator) {
+TEST(TransformerTest, OutputOperator)
+{
     Autobot autobot("Optimus Prime", 100, "Autobot", "Truck");
     std::stringstream ss;
     ss << autobot;
     EXPECT_EQ(ss.str(), "Autobot: Optimus Prime, Power Level: 100, Faction: Autobot, Vehicle Type: Truck");
 }
 
-TEST(TransformerTest, ComparisonOperator) {
+TEST(TransformerTest, ComparisonOperator)
+{
     Autobot autobot("Optimus Prime", 100, "Autobot", "Truck");
     Decepticon decepticon("Megatron", 90, "Decepticon", "Cannon");
     EXPECT_TRUE(autobot > decepticon);
     EXPECT_FALSE(autobot < decepticon);
 }
 
-TEST(GunTest, OutputOperator) {
+TEST(GunTest, OutputOperator)
+{
     Gun gun("Laser", 50);
     std::stringstream ss;
     ss << gun;
     EXPECT_EQ(ss.str(), "Gun: Laser, Damage: 50");
 }
 
-TEST(GunTest, ComparisonOperator) {
+TEST(GunTest, ComparisonOperator)
+{
     Gun gun1("Laser", 50);
     Gun gun2("Plasma", 40);
     EXPECT_TRUE(gun1 > gun2);
     EXPECT_FALSE(gun1 < gun2);
 }
 
-TEST(TransformerTest, DirectMethodCalls) {
+TEST(TransformerTest, DirectMethodCalls)
+{
     Autobot autobot("Optimus Prime", 100, "Autobot", "Truck");
     Decepticon decepticon("Megatron", 90, "Decepticon", "Cannon");
 
-    autobot.transform();  
-    autobot.openFire();  
-    autobot.ulta();      
-    decepticon.transform();  
-    decepticon.openFire();   
-    decepticon.ulta();       
+    autobot.transform();
+    autobot.openFire();
+    autobot.ulta();
+    decepticon.transform();
+    decepticon.openFire();
+    decepticon.ulta();
 }
 
-TEST(TransformerTest, PolymorphicMethodCalls) {
+TEST(TransformerTest, PolymorphicMethodCalls)
+{
     Autobot autobot("Optimus Prime", 100, "Autobot", "Truck");
     Decepticon decepticon("Megatron", 90, "Decepticon", "Cannon");
 
     Transformer* transformer1 = &autobot;
     Transformer* transformer2 = &decepticon;
 
-    transformer1->transform(); 
-    transformer1->openFire();  
-    transformer1->ulta();       
+    transformer1->transform();
+    transformer1->openFire();
+    transformer1->ulta();
 
-    transformer2->transform();  
-    transformer2->openFire();  
-    transformer2->ulta();      
+    transformer2->transform();
+    transformer2->openFire();
+    transformer2->ulta();
 }
 
-TEST(TransformerTest, VectorOfTransformers) {
+TEST(TransformerTest, VectorOfTransformers)
+{
     std::vector<Transformer*> transformers;
 
     transformers.push_back(new Autobot("Optimus Prime", 100, "Autobot", "Truck"));
@@ -90,19 +99,22 @@ TEST(TransformerTest, VectorOfTransformers) {
     transformers.push_back(new Decepticon("Shockwave", 92, "Decepticon", "Laser"));
     transformers.push_back(new Decepticon("Devastator", 120, "Decepticon", "Combiner"));
 
-    for (auto transformer : transformers) {
+    for (auto transformer : transformers)
+    {
         transformer->transform();
         transformer->openFire();
         transformer->ulta();
     }
 
     // Очистка памяти
-    for (auto transformer : transformers) {
+    for (auto transformer : transformers)
+    {
         delete transformer;
     }
 }
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }

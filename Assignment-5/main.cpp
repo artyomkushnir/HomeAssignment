@@ -5,7 +5,8 @@
 #include "Decepticon.h"
 #include "Gun.h"
 
-int main() {
+int main()
+{
     Autobot autobot("Optimus Prime", 100, "Autobots", "Truck");
     Decepticon decepticon("Megatron", 100, "Decepticons", "Cannon");
 
@@ -20,7 +21,7 @@ int main() {
 
     autobot.increasePowerLevel(52);
     decepticon.decreasePowerLevel(25);
-    
+
     blaster.increaseDamage(20);
 
     std::cout << autobot.getName() << (autobot.getIsTransformed() ? " has transformed!" : " has not transformed.") << std::endl;
