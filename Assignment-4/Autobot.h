@@ -4,7 +4,8 @@
 #include "Transformer.h"
 #include <iostream>
 
-class Autobot : public Transformer {
+class Autobot : public Transformer
+{
 private:
     std::string vehicleType;
 

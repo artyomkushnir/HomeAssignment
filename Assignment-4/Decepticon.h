@@ -4,7 +4,8 @@
 #include "Transformer.h"
 #include <iostream>
 
-class Decepticon : public Transformer {
+class Decepticon : public Transformer
+{
 private:
     std::string weaponType;
 

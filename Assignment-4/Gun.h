@@ -3,7 +3,8 @@
 
 #include <iostream>
 
-class Gun {
+class Gun
+{
 private:
     std::string type;
     int damage;
